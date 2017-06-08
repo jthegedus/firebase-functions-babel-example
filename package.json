@@ -2,33 +2,28 @@
   "name": "firebase-functions-babel-example",
   "version": "1.0.0",
   "description": "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/jthegedus/firebase-functions-babel-example#readme",
+  "bugs": {
+    "url": "https://github.com/jthegedus/firebase-functions-babel-example/issues"
   },
+  "license": "MIT",
+  "author": "James Hegedus",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jthegedus/firebase-functions-babel-example.git"
   },
-  "keywords": [
-    "Babel",
-    "Babel",
-    "Preset",
-    "Env",
-    "Firebase",
-    "Google",
-    "Cloud",
-    "Functions",
-    "Cloud",
-    "Functions",
-    "for",
-    "Firebase",
-    "ES6+"
-  ],
-  "author": "James Hegedus",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jthegedus/firebase-functions-babel-example/issues"
+  "scripts": {
+    "format": "yarn run format:js && yarn run format:pkgjson",
+    "format:js": "prettier --write --no-semi --list-different './functionsES6/**/*.js'",
+    "format:pkgjson": "sort-package-json",
+    "prepackage-functions": "rimraf functions",
+    "package-functions": "",
+    "postpackage-functions": "yarn run package-functions && firebase deploy"
   },
-  "homepage": "https://github.com/jthegedus/firebase-functions-babel-example#readme"
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "prettier": "^1.4.2",
+    "rimraf": "^2.6.1",
+    "sort-package-json": "^1.6.1"
+  }
 }
