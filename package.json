@@ -1,7 +1,8 @@
 {
   "name": "firebase-functions-babel-example",
   "version": "1.0.0",
-  "description": "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
+  "description":
+    "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
   "homepage": "https://github.com/jthegedus/firebase-functions-babel-example#readme",
   "bugs": {
     "url": "https://github.com/jthegedus/firebase-functions-babel-example/issues"
@@ -14,18 +15,15 @@
   },
   "scripts": {
     "deploy": "yarn run format && yarn run package:functions && firebase deploy",
-    "format": "yarn run format:js && yarn run format:pkgjson",
-    "format:js": "prettier --write --no-semi --list-different './firebaseFunctions/**/*.js'",
-    "format:pkgjson": "sort-package-json",
+    "format": "yarn run prettier --write --no-semi --list-different './firebaseFunctions/**/*.js'",
     "prepackage:functions": "rimraf functions",
     "package:functions": "babel 'firebaseFunctions' --out-dir 'functions' --copy-files --ignore 'node_modules'",
     "postpackage:functions": "cd functions && yarn"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.5.2",
-    "prettier": "^1.4.2",
-    "rimraf": "^2.6.1",
-    "sort-package-json": "^1.6.1"
+    "@babel/preset-env": "^7.0.0-beta.4",
+    "babel-cli": "^6.26.0",
+    "prettier": "^1.7.4",
+    "rimraf": "^2.6.2"
   }
 }
