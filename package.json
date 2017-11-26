@@ -1,37 +1,30 @@
 {
   "name": "firebase-functions-babel-example",
   "version": "1.0.0",
-  "description":
-    "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
-  "homepage":
-    "https://github.com/jthegedus/firebase-functions-babel-example#readme",
+  "description": "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
+  "homepage": "https://github.com/jthegedus/firebase-functions-babel-example#readme",
   "bugs": {
-    "url":
-      "https://github.com/jthegedus/firebase-functions-babel-example/issues"
+    "url": "https://github.com/jthegedus/firebase-functions-babel-example/issues"
   },
   "license": "MIT",
   "author": "James Hegedus",
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/jthegedus/firebase-functions-babel-example.git"
+    "url": "git+https://github.com/jthegedus/firebase-functions-babel-example.git"
   },
   "scripts": {
-    "deploy":
-      "yarn run format && yarn run package:functions && firebase deploy",
-    "format":
-      "yarn run prettier --write --no-semi './firebaseFunctions/index.js'",
+    "deploy": "yarn run format && yarn run package:functions && firebase deploy",
+    "format": "yarn run prettier --write --no-semi './firebaseFunctions/index.js'",
     "prepackage:functions": "rimraf functions",
-    "package:functions":
-      "babel firebaseFunctions --out-dir functions --copy-files --ignore firebaseFunctions/node_modules",
+    "package:functions": "babel firebaseFunctions --out-dir functions --copy-files --ignore firebaseFunctions/node_modules",
     "postpackage:functions": "cd functions && yarn"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.31",
-    "@babel/core": "^7.0.0-beta.31",
-    "@babel/preset-env": "^7.0.0-beta.31",
-    "firebase-tools": "^3.14.0",
-    "prettier": "^1.8.1",
+    "@babel/cli": "^7.0.0-beta.32",
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "firebase-tools": "^3.15.3",
+    "prettier": "^1.8.2",
     "rimraf": "^2.6.2"
   }
 }
