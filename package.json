@@ -1,22 +1,32 @@
 {
   "name": "firebase-functions-babel-example",
   "version": "1.0.0",
-  "description": "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
-  "homepage": "https://github.com/jthegedus/firebase-functions-babel-example#readme",
+  "description":
+    "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
+  "homepage":
+    "https://github.com/jthegedus/firebase-functions-babel-example#readme",
   "bugs": {
-    "url": "https://github.com/jthegedus/firebase-functions-babel-example/issues"
+    "url":
+      "https://github.com/jthegedus/firebase-functions-babel-example/issues"
   },
   "license": "MIT",
   "author": "James Hegedus",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jthegedus/firebase-functions-babel-example.git"
+    "url":
+      "git+https://github.com/jthegedus/firebase-functions-babel-example.git"
   },
   "scripts": {
-    "deploy": "yarn run format && yarn run package:functions && firebase deploy",
-    "format": "yarn run prettier --write --no-semi './firebaseFunctions/index.js'",
+    "login": "firebase login",
+    "preserve": "yarn package:functions",
+    "serve": "firebase serve --only functions",
+    "deploy":
+      "yarn run format && yarn run package:functions && firebase deploy",
+    "format":
+      "yarn run prettier --write --no-semi './firebaseFunctions/index.js'",
     "prepackage:functions": "rimraf functions",
-    "package:functions": "babel firebaseFunctions --out-dir functions --copy-files --ignore firebaseFunctions/node_modules",
+    "package:functions":
+      "babel firebaseFunctions --out-dir functions --copy-files --ignore firebaseFunctions/node_modules",
     "postpackage:functions": "cd functions && yarn"
   },
   "devDependencies": {
