@@ -10,7 +10,7 @@ Here is the accompanying
 
 ## TLDR;
 
-Develop your Coud Functions in a different directory to the default
+Develop your Cloud Functions in a different directory to the default
 `./functions` directory. I suggest `./firebaseFunctions`. Then use
 `@babel/core`, `@babel/cli` and `babel/preset-env` with some npm scripts to
 compile to the Cloud Functions server runtime of NodeJS v6.11.5. The output
