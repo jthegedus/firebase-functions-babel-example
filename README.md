@@ -1,3 +1,11 @@
+# THIS REPO HAS BEEN MOVED
+
+This example has been merged into my
+[blog-examples](https://github.com/jthegedus/blog-examples) repo. This repo will
+no longer be updated.
+
+---
+
 # Firebase Functions with Babel config to target the correct Execution Environment
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
